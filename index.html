@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Ontario Will Clinic</title>
+  <meta name="description" content="A student-built self-help legal clinic: learn Ontario will basics, required clauses, and how to draft a clean will template." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <!-- Background FX -->
+  <div class="bgFX" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="grid"></div>
+    <div class="vignette"></div>
+  </div>
+
+  <!-- Top Bar -->
+  <header class="topbar">
+    <a class="brand" href="#/home" aria-label="Ontario Will Clinic Home">
+      <span class="brandMark">OWC</span>
+      <span class="brandText">
+        <span class="brandName">The Ontario Will Clinic</span>
+        <span class="brandSub">Self-Help Legal Clinic (CLU3M)</span>
+      </span>
+    </a>
+
+    <nav class="nav">
+      <a class="navLink" href="#/home" data-nav="home">Home</a>
+      <a class="navLink" href="#/walkthrough" data-nav="walkthrough">Walkthrough</a>
+      <a class="navLink" href="#/willinator" data-nav="willinator">Will-I-Nator</a>
+      <a class="navLink" href="#/simulation" data-nav="simulation">Simulation</a>
+      <a class="navLink" href="#/vault" data-nav="vault">Legal Vault</a>
+    </nav>
+
+    <div class="topbarActions">
+      <button class="btn btnGhost" id="btnPrint">Print</button>
+      <a class="btn btnPrimary" href="#/willinator">Start</a>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <aside class="mobileNav" id="mobileNav" hidden>
+    <a href="#/home" data-nav="home">Home</a>
+    <a href="#/walkthrough" data-nav="walkthrough">Walkthrough</a>
+    <a href="#/willinator" data-nav="willinator">Will-I-Nator</a>
+    <a href="#/simulation" data-nav="simulation">Simulation</a>
+    <a href="#/vault" data-nav="vault">Legal Vault</a>
+  </aside>
+
+  <main class="app" id="app">
+    <!-- HOME -->
+    <section class="view" data-route="home">
+      <div class="hero">
+        <div class="heroLeft">
+          <div class="pill reveal">
+            <span class="dot"></span>
+            Ontario wills explained in plain language
+          </div>
+
+          <h1 class="reveal">
+            Make a Will that actually works in Ontario.
+          </h1>
+
+          <p class="lead reveal">
+            A will is a document that says where your property and possessions go after you die. It can also name who will care for minor children.
+            This clinic teaches the practical steps, common mistakes, and the clauses you must include.
+          </p>
+
+          <div class="heroCTA reveal">
+            <a class="btn btnPrimary" href="#/walkthrough">Learn the 5 stages</a>
+            <a class="btn btnGhost" href="#/simulation">Try the drafting demo</a>
+          </div>
+
+          <div class="trustRow reveal">
+            <div class="trustCard">
+              <div class="trustK">When it takes effect</div>
+              <div class="trustV">Only after death</div>
+              <div class="trustS">Executors have no authority while you’re alive.</div>
+            </div>
+            <div class="trustCard">
+              <div class="trustK">If you’re incapacitated</div>
+              <div class="trustV">Use a Power of Attorney</div>
+              <div class="trustS">A will does not manage property during life.</div>
+            </div>
+            <div class="trustCard">
+              <div class="trustK">Valid execution</div>
+              <div class="trustV">Signed + witnessed</div>
+              <div class="trustS">Most wills need two witnesses; holograph is an exception.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="heroRight reveal">
+          <div class="heroArtCard">
+            <div class="heroArtTop">
+              <span class="chip">Ontario</span>
+              <span class="chip chipSoft">Will Essentials</span>
+            </div>
+
+            <svg class="heroSvg" viewBox="0 0 560 360" role="img" aria-label="Abstract legal illustration">
+              <defs>
+                <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="rgba(59,130,246,0.95)"/>
+                  <stop offset="1" stop-color="rgba(148,163,184,0.20)"/>
+                </linearGradient>
+                <linearGradient id="g2" x1="1" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="rgba(15,23,42,1)"/>
+                  <stop offset="1" stop-color="rgba(59,130,246,0.35)"/>
+                </linearGradient>
+              </defs>
+
+              <rect x="24" y="24" width="512" height="312" rx="26" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.10)"/>
+              <path d="M80 260 C120 200, 170 215, 220 160 C270 105, 340 110, 405 78 C460 50, 485 72, 500 98"
+                    fill="none" stroke="url(#g1)" stroke-width="10" stroke-linecap="round"/>
+              <circle cx="130" cy="210" r="10" fill="rgba(59,130,246,0.95)"/>
+              <circle cx="220" cy="160" r="10" fill="rgba(59,130,246,0.95)"/>
+              <circle cx="405" cy="78" r="10" fill="rgba(59,130,246,0.95)"/>
+
+              <rect x="70" y="86" width="210" height="40" rx="14" fill="url(#g2)" stroke="rgba(255,255,255,0.10)"/>
+              <text x="92" y="112" fill="rgba(226,232,240,0.92)" font-size="14" font-family="Inter, system-ui">Risk ↓ when clauses are clear</text>
+
+              <rect x="70" y="140" width="420" height="150" rx="18" fill="rgba(2,6,23,0.55)" stroke="rgba(255,255,255,0.10)"/>
+              <text x="92" y="176" fill="rgba(226,232,240,0.92)" font-size="16" font-weight="700" font-family="Inter, system-ui">Last Will and Testament</text>
+              <text x="92" y="206" fill="rgba(226,232,240,0.76)" font-size="13" font-family="Inter, system-ui">Executor • Beneficiaries • Guardians • Residue</text>
+              <text x="92" y="236" fill="rgba(226,232,240,0.62)" font-size="13" font-family="Inter, system-ui">Signed at the end • Proper witnesses • Safe storage</text>
+            </svg>
+
+            <div class="heroArtBottom">
+              <div class="miniStat">
+                <div class="miniNum">5</div>
+                <div class="miniLbl">legal stages</div>
+              </div>
+              <div class="miniStat">
+                <div class="miniNum">2</div>
+                <div class="miniLbl">witnesses (most wills)</div>
+              </div>
+              <div class="miniStat">
+                <div class="miniNum">1</div>
+                <div class="miniLbl">original to store safely</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="section">
+        <div class="sectionHead reveal">
+          <h2>What a will is (and isn’t)</h2>
+          <p class="muted">
+            Built around Ontario’s plain-language guidance, with classroom-friendly explanations.
+          </p>
+        </div>
+
+        <div class="grid3">
+          <article class="card reveal">
+            <h3>What is a will?</h3>
+            <p>
+              A will is a document that explains where your property and possessions go after you die. It can also appoint a person to care for minor children.
+            </p>
+            <ul class="list">
+              <li>Property, money, and personal items</li>
+              <li>Executor (estate trustee)</li>
+              <li>Guardians/custodians for minors</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <h3>When does it take effect?</h3>
+            <p>
+              A will takes effect only after the person dies. The executor has no legal power while the person is alive, even if they become incapable.
+            </p>
+            <div class="note">
+              If you need someone to manage property while you’re alive, that’s a Power of Attorney.
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <h3>Why people get into trouble</h3>
+            <p>
+              Most disasters come from unclear wording, invalid witnessing, or losing the original will. When there’s no will, Ontario’s intestacy rules decide.
+            </p>
+            <ul class="list">
+              <li>Common-law partners don’t automatically inherit</li>
+              <li>Courts may appoint an administrator</li>
+              <li>Guardianship decisions can shift to the court</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="sectionHead reveal">
+          <h2>Ontario Legal Checklist</h2>
+          <p class="muted">
+            Use this as your “minimum viable will” checklist.
+          </p>
+        </div>
+
+        <div class="checklist reveal" id="homeChecklist">
+          <label class="checkItem"><input type="checkbox"> I am making a will voluntarily and understand what it does.</label>
+          <label class="checkItem"><input type="checkbox"> I listed my main assets (property, money, valuables).</label>
+          <label class="checkItem"><input type="checkbox"> I chose an executor and an alternate executor.</label>
+          <label class="checkItem"><input type="checkbox"> I named beneficiaries and clarified residue (what happens to “everything else”).</label>
+          <label class="checkItem"><input type="checkbox"> If I have minor children, I named guardians/custodians (and alternates).</label>
+          <label class="checkItem"><input type="checkbox"> I will sign at the end, with proper witnesses (or holograph rules if handwritten).</label>
+          <label class="checkItem"><input type="checkbox"> I will store the original safely and tell my executor where it is.</label>
+        </div>
+
+        <div class="callout reveal">
+          <div class="calloutTitle">Classroom disclaimer</div>
+          <div class="calloutBody">
+            This website is educational. It does not replace legal advice. If your situation is complex (blended families, businesses, disputes, foreign property), talk to a lawyer.
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- WALKTHROUGH -->
+    <section class="view" data-route="walkthrough" hidden>
+      <div class="pageHead">
+        <div class="pageKicker reveal">Educational walkthrough</div>
+        <h1 class="reveal">The 5 legal stages of making a will in Ontario</h1>
+        <p class="lead reveal">
+          Click each stage to see what the law expects, what people mess up, and what you should do in real life.
+        </p>
+      </div>
+
+      <div class="layoutTwo">
+        <div class="stepper reveal" id="stepper"></div>
+        <div class="panel reveal" id="stepDetail"></div>
+      </div>
+
+      <div class="section">
+        <div class="sectionHead reveal">
+          <h2>Validity essentials (fast rules)</h2>
+          <p class="muted">Plain language version of the execution rules you must follow.</p>
+        </div>
+
+        <div class="grid2">
+          <article class="card reveal">
+            <h3>Formal will (most common)</h3>
+            <ul class="list">
+              <li>In writing</li>
+              <li>Signed at the end</li>
+              <li>Signed/acknowledged in front of two witnesses present at the same time</li>
+              <li>Witnesses sign in the testator’s presence</li>
+            </ul>
+            <div class="note">
+              Practical tip: avoid using beneficiaries as witnesses. Keep it clean to reduce challenges.
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <h3>Holograph will (handwritten exception)</h3>
+            <ul class="list">
+              <li>Wholly in your own handwriting</li>
+              <li>Signed by you</li>
+              <li>No witnesses required (if it truly meets holograph rules)</li>
+            </ul>
+            <div class="note">
+              Holograph wills can be easier to challenge if wording is unclear. Use caution.
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WILLINATOR -->
+    <section class="view" data-route="willinator" hidden>
+      <div class="pageHead">
+        <div class="pageKicker reveal">Decision engine</div>
+        <h1 class="reveal">Will-I-Nator: find your required clauses</h1>
+        <p class="lead reveal">
+          Answer quick questions about your life. We’ll generate a risk profile and tell you which clauses you must include for a solid Ontario will.
+        </p>
+      </div>
+
+      <div class="willinatorWrap">
+        <div class="willinatorCard reveal">
+          <div class="willinatorTop">
+            <div class="progress">
+              <div class="progressBar" id="wiProgress"></div>
+            </div>
+            <div class="progressMeta">
+              <span id="wiStepLabel">Step 1</span>
+              <span class="muted" id="wiCountLabel">1 / 10</span>
+            </div>
+          </div>
+
+          <div class="willinatorBody" id="wiBody">
+            <!-- injected -->
+          </div>
+
+          <div class="willinatorBottom">
+            <button class="btn btnGhost" id="wiBack">Back</button>
+            <button class="btn btnPrimary" id="wiNext">Next</button>
+          </div>
+        </div>
+
+        <aside class="sidePanel reveal">
+          <h3>What this tool outputs</h3>
+          <p class="muted">
+            You’ll get:
+          </p>
+          <ul class="list">
+            <li>A risk profile (low/medium/high)</li>
+            <li>Must-include clauses</li>
+            <li>Strongly recommended clauses</li>
+            <li>Common mistakes to avoid</li>
+          </ul>
+
+          <div class="callout">
+            <div class="calloutTitle">Reminder</div>
+            <div class="calloutBody">
+              A will works only after death. For life-time decisions (incapacity), use a Power of Attorney.
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="section">
+        <div class="sectionHead reveal">
+          <h2>Accuracy notes (Ontario)</h2>
+          <p class="muted">
+            We keep the language simple, but we don’t oversimplify the important parts.
+          </p>
+        </div>
+        <div class="grid2">
+          <article class="card reveal">
+            <h3>Marriage and wills</h3>
+            <p>
+              Ontario changed the rules so marriage does not automatically revoke a will for marriages on/after January 1, 2022. If your will is old, you should still review it after major life changes.
+            </p>
+          </article>
+          <article class="card reveal">
+            <h3>Intestacy and spouses</h3>
+            <p>
+              If you die without a will, distribution follows Ontario intestacy rules. Common-law partners do not automatically inherit under intestacy rules (marriage matters).
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIMULATION -->
+    <section class="view" data-route="simulation" hidden>
+      <div class="pageHead">
+        <div class="pageKicker reveal">Hands-on activity</div>
+        <h1 class="reveal">Drafting simulation with live will preview</h1>
+        <p class="lead reveal">
+          As you type executor and beneficiaries, your will preview updates in real time. This is a learning tool (not legal advice).
+        </p>
+      </div>
+
+      <div class="simLayout">
+        <div class="simForm card reveal">
+          <div class="cardHead">
+            <h3>Inputs</h3>
+            <p class="muted">Use sample info. Don’t enter real private data for class demos.</p>
+          </div>
+
+          <form id="simForm" autocomplete="off">
+            <div class="fieldRow">
+              <div class="field">
+                <label>Testator full name</label>
+                <input type="text" name="testatorName" placeholder="e.g., Alex Chen">
+              </div>
+              <div class="field">
+                <label>City (Ontario)</label>
+                <input type="text" name="testatorCity" placeholder="e.g., Toronto">
+              </div>
+            </div>
+
+            <div class="fieldRow">
+              <div class="field">
+                <label>Executor</label>
+                <input type="text" name="executorName" placeholder="e.g., Jordan Patel">
+              </div>
+              <div class="field">
+                <label>Alternate executor (optional)</label>
+                <input type="text" name="altExecutorName" placeholder="e.g., Samira Khan">
+              </div>
+            </div>
+
+            <div class="fieldRow">
+              <div class="field">
+                <label>Primary beneficiaries (comma separated)</label>
+                <input type="text" name="beneficiaries" placeholder="e.g., Taylor Chen, Mira Chen">
+              </div>
+            </div>
+
+            <div class="fieldRow">
+              <div class="field">
+                <label>Specific gift (optional)</label>
+                <input type="text" name="specificGift" placeholder="e.g., My watch to Taylor Chen">
+              </div>
+            </div>
+
+            <div class="fieldRow">
+              <div class="field">
+                <label>Minor children?</label>
+                <select name="hasMinors">
+                  <option value="no">No</option>
+                  <option value="yes">Yes</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>Guardian / custodian (if minors)</label>
+                <input type="text" name="guardianName" placeholder="e.g., Jordan Patel">
+              </div>
+            </div>
+
+            <div class="fieldRow">
+              <div class="field">
+                <label>Pet care (optional)</label>
+                <input type="text" name="petClause" placeholder="e.g., My dog Nova to Mira Chen">
+              </div>
+            </div>
+
+            <div class="fieldRow">
+              <div class="field">
+                <label>Storage note (where the original is kept)</label>
+                <input type="text" name="storageNote" placeholder="e.g., Fireproof safe in my closet">
+              </div>
+            </div>
+
+            <div class="note">
+              Execution reminder: most Ontario wills require two witnesses present at the same time when the testator signs. Avoid beneficiaries as witnesses.
+            </div>
+          </form>
+        </div>
+
+        <div class="simPreviewWrap reveal">
+          <div class="previewTop">
+            <div>
+              <div class="previewTitle">Will Preview (Educational Draft)</div>
+              <div class="previewSub muted">A clean Ontario-style format for classroom demonstration.</div>
+            </div>
+            <div class="previewActions">
+              <button class="btn btnGhost" id="btnDownload">Print Preview</button>
+            </div>
+          </div>
+
+          <article class="previewDoc" id="previewDoc" aria-label="Will preview document">
+            <!-- injected -->
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- VAULT -->
+    <section class="view" data-route="vault" hidden>
+      <div class="pageHead">
+        <div class="pageKicker reveal">Resources</div>
+        <h1 class="reveal">Legal Vault</h1>
+        <p class="lead reveal">
+          Real Ontario resources, forms, and a plain-language glossary you can use outside of school.
+        </p>
+      </div>
+
+      <div class="vaultGrid">
+        <div class="card reveal">
+          <div class="cardHead">
+            <h3>Find resources</h3>
+            <p class="muted">Search forms and links.</p>
+          </div>
+          <div class="field">
+            <label>Search</label>
+            <input id="vaultSearch" type="text" placeholder="Try: probate, executor, power of attorney, form 74.4">
+          </div>
+
+          <div class="tabs" id="vaultTabs">
+            <button class="tab active" data-tab="forms">Forms</button>
+            <button class="tab" data-tab="guides">Guides</button>
+            <button class="tab" data-tab="help">Where to get help</button>
+            <button class="tab" data-tab="glossary">Glossary</button>
+          </div>
+
+          <div class="vaultList" id="vaultList"></div>
+        </div>
+
+        <aside class="sidePanel reveal">
+          <h3>Quick cautions</h3>
+          <ul class="list">
+            <li>Store the original will where the executor can access it.</li>
+            <li>If the original can’t be found, courts may presume it was revoked.</li>
+            <li>Update your will after major life changes (new child, new property, separation).</li>
+          </ul>
+
+          <div class="callout">
+            <div class="calloutTitle">Need a lawyer?</div>
+            <div class="calloutBody">
+              Use Ontario’s Law Society Referral Service for a short consultation and next steps.
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <footer class="footer">
+        <div class="footerGrid">
+          <div>
+            <div class="footerTitle">The Ontario Will Clinic</div>
+            <div class="muted">Educational self-help clinic for CLU3M. Not legal advice.</div>
+          </div>
+          <div class="muted">
+            Built as a SPA for GitHub Pages. Hash routes: #/home, #/walkthrough, #/willinator, #/simulation, #/vault
+          </div>
+        </div>
+      </footer>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
